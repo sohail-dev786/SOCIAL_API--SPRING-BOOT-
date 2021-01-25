@@ -10,8 +10,18 @@ public class User {
 	private Location location;
 	private String email;
 	
-	
-	
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public User(String id, String firstname, String lastname, Location location, String email) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.location = location;
+		this.email = email;
+	}
 	public String getId() {
 		return id;
 	}

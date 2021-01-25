@@ -8,6 +8,15 @@ public class Post {
 	private String postdate;
 	private User user;
 	private String details;
+	
+	
+	public Post(String id, String postdate, User user, String details) {
+		super();
+		this.id = id;
+		this.postdate = postdate;
+		this.user = user;
+		this.details = details;
+	}
 	public String getId() {
 		return id;
 	}
