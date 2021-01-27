@@ -1,5 +1,6 @@
 package com.socialapi.post;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -54,23 +55,25 @@ public class PostService {
 			user2,
 			"Third Post"
 			);
-	List<Post> posts=Arrays.asList(post,post1,post2);
+	List<Post> posts=new ArrayList<>(Arrays.asList(post,post1,post2));
 	
-	public List<Post> getAllPosts()
-	{
+	public List<Post> getAllPosts(){
 		return posts;
 	}
 	
-	public Post getPostById(String id)
-	{
+	public Post getPostById(String id){
 		Post post=posts.stream()
 				.filter(t -> id.equals(t.getId()))
 				.findFirst()
 				.orElse(null);
 		
-		return post;
-		
+		return post;	
 	}
+
+	public void addPost(Post post) {		
+		posts.add(post);
+	}
+	
 	
 	
 }

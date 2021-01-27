@@ -1,5 +1,6 @@
 package com.socialapi.location;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class LocationService {
 	Location location2=new Location("l3", "Goa");
 	Location location3=new Location("l4", "Rajasthan");
 	
-	List<Location> locations=Arrays.asList(location,location1,location2,location3);
+	List<Location> locations=new ArrayList<>(Arrays.asList(location,location1,location2,location3));
 
 	
 	
@@ -30,5 +31,9 @@ public class LocationService {
 				.orElse(null);
 		
 		return location;
+	}
+
+	public void addLocation(Location location) {
+		locations.add(location);	
 	}
 }

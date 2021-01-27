@@ -1,5 +1,6 @@
 package com.socialapi.user;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,16 +27,14 @@ public class UserService {
 			new Location("L2","Mumbai"),
 			"kedarSir@gmail.com"
 			);
-	List<User> users= Arrays.asList(user,user1);
+	List<User> users= new ArrayList<>(Arrays.asList(user,user1));
 
 	
-	public List<User> getAllUsers()
-	{	
+	public List<User> getAllUsers()	{	
 		return users;
 	}
 	
-	public  User getUserById(String id)
-	{
+	public  User getUserById(String id){
 		User user=users.stream()
 				.filter(t -> id.equals(t.getId()))
 				.findFirst()
@@ -43,6 +42,11 @@ public class UserService {
 		
 		return user;		
 	}
+
+	public void addUser(User user) {
+			users.add(user);
+	}
+
 	
 	
 }
