@@ -49,4 +49,19 @@ public class UserService {
 
 	
 	
+	public void updateUser(String id, User user)
+	{
+		for(int i=0;i<users.size();i++)
+		{	
+			User l=users.get(i);
+			
+			if(l.getId().equals(id))
+			{
+				users.set(i, user);
+			}
+		}	
+	}
+
+	
+	
 }

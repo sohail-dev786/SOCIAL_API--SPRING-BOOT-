@@ -73,6 +73,19 @@ public class PostService {
 	public void addPost(Post post) {		
 		posts.add(post);
 	}
+
+	public void addPost(String id, Post post) {
+		
+		for(int i=0;i<posts.size();i++) {
+			
+			Post p=posts.get(i);
+			
+			if(p.getId().equals(id))
+			{
+				posts.set(i, post);
+			}
+		}
+	}
 	
 	
 	

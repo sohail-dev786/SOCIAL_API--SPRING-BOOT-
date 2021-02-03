@@ -36,5 +36,12 @@ public class UserController {
 		userService.addUser(user);
 	}
 	
+	@RequestMapping(value = "/users/{id}",method = RequestMethod.PUT)
+	public void updateLocation(@RequestBody User user,@PathVariable String id) {
+		
+		userService.updateUser(id,user);
+		
+	}
+	
 	
 }
