@@ -40,6 +40,13 @@ public class LocationController {
 	{
 		locationService.updateLocation(id,location);
 	}
+	
+	
+	@RequestMapping(value = "/locations/{id}",method = RequestMethod.DELETE)
+	public void deleteLocation(@PathVariable String id) 
+	{
+		locationService.deleteLocation(id);	
+	}
 
 	
 }

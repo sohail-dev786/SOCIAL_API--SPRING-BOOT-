@@ -51,4 +51,9 @@ public class LocationService {
 		}
 		
 	}
+
+	public void deleteLocation(String id) {
+		
+		locations.removeIf(l ->l.getId().equals(id));
+	}
 }

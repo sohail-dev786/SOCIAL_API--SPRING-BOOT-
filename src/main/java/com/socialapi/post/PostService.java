@@ -20,6 +20,7 @@ public class PostService {
 			new Location("L1","Mumbai"),
 			"sohailss4444@gmail.com"
 			);
+	
 	User user1=new User(
 			"102",
 			"Kedar",
@@ -85,6 +86,11 @@ public class PostService {
 				posts.set(i, post);
 			}
 		}
+	}
+
+	public void deletePost(String id) {
+	
+		posts.removeIf(p ->p.getId().equals(id));
 	}
 	
 	

@@ -44,4 +44,9 @@ public class PostController {
 		
 	}
 	
+	@RequestMapping(value = "/posts/{id}",method = RequestMethod.DELETE)
+	public void deletePost(@PathVariable String id) {
+		postService.deletePost(id);
+	}
+	
 }
