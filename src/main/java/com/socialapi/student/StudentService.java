@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class StudentService {
 
 	@Autowired
-	StudentRepository repository;
+	private StudentRepository repository;
 
 	public List<Student> getAllStudents() 
 	{	

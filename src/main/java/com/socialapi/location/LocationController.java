@@ -2,6 +2,7 @@ package com.socialapi.location;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +25,7 @@ public class LocationController {
 	}
 	
 	@RequestMapping(value = "/locations/{id}")
-	public Location getLocationById(@PathVariable String id)
+	public Optional<Location> getLocationById(@PathVariable String id)
 	{
 		return locationService.getLocationById(id);
 	}

@@ -1,10 +1,18 @@
 package com.socialapi.location;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Location {
 
+	@Id
 	private String id;
 	private String name;
+	
+	public Location(){
+		
+	}
 	
 	public Location(String id, String name) {
 		super();

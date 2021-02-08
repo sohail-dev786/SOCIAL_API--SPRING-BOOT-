@@ -2,6 +2,7 @@ package com.socialapi.post;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +27,7 @@ public class PostController {
 	}
 	
 	@RequestMapping(value="/posts/{id}")
-	public Post getPostById(@PathVariable String id)
+	public Optional<Post> getPostById(@PathVariable String id)
 	{
 		return postService.getPostById(id);
 	}

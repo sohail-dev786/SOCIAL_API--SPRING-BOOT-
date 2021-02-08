@@ -1,9 +1,14 @@
 package com.socialapi.user;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import com.socialapi.location.Location;
 
+@Entity
 public class User {
 
+	@Id
 	private String id;
 	private String firstname;
 	private String lastname;
@@ -11,9 +16,9 @@ public class User {
 	private String email;
 	
 	public User() {
-		super();
-		// TODO Auto-generated constructor stub
+	
 	}
+	
 	public User(String id, String firstname, String lastname, Location location, String email) {
 		super();
 		this.id = id;
