@@ -44,6 +44,16 @@ public class UserService {
 		userRepository.deleteById(id);
 	}
 
+	public List<User> getUsersByLocationId(String id) 
+	{
+		return userRepository.findByLocationId(id);
+	}
+
+	public List<User> getUsersByFirstName(String firstname) 
+	{	
+		return userRepository.findByFirstname(firstname);
+	}
+
 	
 	
 	

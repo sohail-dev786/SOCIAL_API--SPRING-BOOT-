@@ -49,5 +49,16 @@ public class UserController {
 		userService.deleteUser(id);
 	}
 	
+	@RequestMapping(value = "/users/locations/{id}",method = RequestMethod.GET)
+	public List<User> getUsersByLocationId(@PathVariable String id)
+	{
+		return userService.getUsersByLocationId(id);
+	}
+	
+	@RequestMapping(value = "/users/firstname/{firstname}",method = RequestMethod.GET)
+	public List<User> getUsersByFirstName(@PathVariable String firstname)
+	{
+		return userService.getUsersByFirstName(firstname);
+	}
 	
 }

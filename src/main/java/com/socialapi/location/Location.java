@@ -2,8 +2,10 @@ package com.socialapi.location;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "SocialApi_Location")
 public class Location {
 
 	@Id

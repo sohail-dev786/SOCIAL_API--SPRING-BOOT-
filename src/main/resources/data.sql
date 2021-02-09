@@ -1,0 +1,27 @@
+INSERT INTO SocialApi_Location VALUES("L1","MUMBAI");
+INSERT INTO SocialApi_Location VALUES("L2","HYDERABAD");
+INSERT INTO SocialApi_Location VALUES("L3","PUNE");
+INSERT INTO SocialApi_Location VALUES("L4","BANGLORE");
+INSERT INTO SocialApi_Location VALUES("L5","CHENNAI");
+
+-- INSERT INTO SocialApi_User VALUES (
+
+
+
+-- );
+
+-- INSERT INTO SocialApi_Post VALUES (
+--     "",
+--     "",
+    
+
+
+-- );
+
+
+
+INSERT INTO SocialApi_Student VALUES("S1","SOHAIL","SOFTWARE ENGINEER");
+INSERT INTO SocialApi_Student VALUES("S2","NIKIT","PHOTOGRAPHER");
+INSERT INTO SocialApi_Student VALUES("S3","KEDAR SIR","NIIT-FULL STACK FACULT");
+INSERT INTO SocialApi_Student VALUES("S4","VIRAL","SOFTWARE ENGINEER");
+INSERT INTO SocialApi_Student VALUES("S1","SHUBBHAM","SOFTWARE ENGINEER");

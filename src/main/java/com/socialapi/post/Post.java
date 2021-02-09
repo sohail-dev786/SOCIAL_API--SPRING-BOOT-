@@ -2,15 +2,20 @@ package com.socialapi.post;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import com.socialapi.user.User;
 
 @Entity
+@Table(name = "SocialApi_Post")
 public class Post {
 
 	@Id
 	private String id;
 	private String postdate;
+	
+	@ManyToOne
 	private User user;
 	private String details;
 
