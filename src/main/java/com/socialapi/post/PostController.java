@@ -39,9 +39,9 @@ public class PostController {
 	}
 	
 	@RequestMapping(value = "/posts/{id}",method =RequestMethod.PUT)
-	public void addPost(@RequestBody Post post,@PathVariable String id) {
+	public void updatePost(@RequestBody Post post,@PathVariable String id) {
 		
-		postService.addPost(id,post);
+		postService.updatePost(id,post);
 		
 	}
 	

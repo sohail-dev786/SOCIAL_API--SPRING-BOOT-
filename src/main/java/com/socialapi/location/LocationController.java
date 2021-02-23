@@ -1,17 +1,17 @@
 package com.socialapi.location;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class LocationController {
 
 	@Autowired
@@ -19,9 +19,11 @@ public class LocationController {
 	
 	
 	@RequestMapping(value="/locations")
-	public List<Location> getAllLocations()
+	public String getAllLocations(Model model)
 	{
-		return locationService.getAllLocations();
+		List<Location> locations=locationService.getAllLocations();
+		model.addAttribute("locations", locations);
+		return "locations";
 	}
 	
 	@RequestMapping(value = "/locations/{id}")

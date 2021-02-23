@@ -33,7 +33,7 @@ public class PostService {
 		postRepository.save(post);	
 	}
 
-	public void addPost(String id, Post post) 
+	public void updatePost(String id, Post post) 
 	{
 		postRepository.save(post);
 	}

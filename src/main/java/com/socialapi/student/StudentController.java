@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,9 +20,11 @@ public class StudentController {
 	
 	
 	@RequestMapping(value = "/students",method = RequestMethod.GET)
-	public List<Student> getAllStudents()
+	public String getAllStudents(Model model)
 	{	
-		return studentService.getAllStudents();
+		List<Student> students=studentService.getAllStudents();
+		model.addAttribute("students", students);
+		return "students";
 	}
 	
 	@RequestMapping(value="/students/{id}",method = RequestMethod.GET)
