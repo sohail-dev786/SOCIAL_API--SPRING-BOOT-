@@ -20,11 +20,11 @@ public class StudentController {
 	
 	
 	@RequestMapping(value = "/students",method = RequestMethod.GET)
-	public String getAllStudents(Model model)
-	{	
-		List<Student> students=studentService.getAllStudents();
-		model.addAttribute("students", students);
-		return "students";
+	public List<Student> getAllStudents()
+{	
+//		List<Student> students=studentService.getAllStudents();
+//		model.addAttribute("students", students);
+		return studentService.getAllStudents();
 	}
 	
 	@RequestMapping(value="/students/{id}",method = RequestMethod.GET)
